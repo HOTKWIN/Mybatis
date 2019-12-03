@@ -1,0 +1,7 @@
+# Project exclude paths
+/day01_T01_mybatis/target/
+/day01_T02_annotation/target/
+/day01_T03_daoImp/target/
+/day01_T04_mybatis_design/target/
+/day02_T01_CRUD/target/
+/day02_T02_mybatisDao/target/
