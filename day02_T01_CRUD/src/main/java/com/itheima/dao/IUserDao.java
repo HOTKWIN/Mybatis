@@ -17,6 +17,7 @@ public interface IUserDao {
      */
     List<User> findAll();
 
+
     /**
      * 保存用户
      * @param user
@@ -33,14 +34,14 @@ public interface IUserDao {
      * 根据Id删除用户
      * @param userId
      */
-    void deleteUser(Integer userId);
+    void deleteUser(int userId);
 
     /**
      * 根据Id查询用户
      * @param userId
      * @return
      */
-    User findById(Integer userId);
+    User findById(int userId);
 
     /**
      * 根据名称模糊查询用户信息
@@ -60,5 +61,24 @@ public interface IUserDao {
      * @param vo
      * @return
      */
-    List<User> findUserByVo(QueryVo vo);
+    List<User> findByVo(QueryVo vo);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

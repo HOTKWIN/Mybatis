@@ -29,80 +29,77 @@ public class MybatisTest {
     @Before
     public void init() throws IOException {
         in = Resources.getResourceAsStream("SqlMapConfig.xml");
-        SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
-        SqlSessionFactory factory = builder.build(in);
+        SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(in);
         session = factory.openSession();
         userDao = session.getMapper(IUserDao.class);
-
     }
 
     @After
     public void destroy() throws IOException {
-        //提交事务
         session.commit();
-
         session.close();
         in.close();
     }
+
 
     /**
      * 测试查找所有用户操作
      * @throws IOException
      */
     @Test
-    public void testFindAll() throws IOException {
-
+    public void testFindAll(){
         List<User> users = userDao.findAll();
         for (User user:users)
             System.out.println(user);
     }
 
+
     /**
      * 测试保存用户操作
      */
     @Test
-    public void testSaveUser() throws IOException {
-
+    public void testSaveUser(){
         User user = new User();
-        user.setUsername("kwin");
-        user.setAddress("广东省广州市");
+        user.setUsername("kwin3");
+        user.setAddress("广东广州");
         user.setSex("男");
         user.setBirthday(new Date());
 
-        System.out.println("保存操作之前：" + user);
+        System.out.println("保存操作之前" + user);
         userDao.saveUser(user);
-        System.out.println("保存操作之后：" + user);
-
+        System.out.println("保存操作之后" + user);
     }
+
 
     /**
      * 测试更新操作
      */
     @Test
-    public void testUpdate(){
+    public void testUpdateUser(){
         User user = new User();
         user.setId(49);
-        user.setUsername("lsx");
-        user.setAddress("白云区");
-        user.setSex("女");
+        user.setUsername("kwin1");
+        user.setAddress("广东广州");
+        user.setSex("男");
         user.setBirthday(new Date());
 
         userDao.updateUser(user);
     }
+
 
     /**
      * 测试删除操作
      */
     @Test
     public void testDelete(){
-        userDao.deleteUser(51);
+        userDao.deleteUser(49);
     }
 
     /**
      * 测试查询单个用户的方法
      */
     @Test
-    public void testFindOne(){
+    public void testFindById(){
         User user = userDao.findById(48);
         System.out.println(user);
     }
@@ -112,9 +109,9 @@ public class MybatisTest {
      */
     @Test
     public void testFindByName(){
-        List<User> users = userDao.findByName("%王%");
-//        List<User> users = userDao.findByName("王");
-        for(User user:users)
+//        List<User> users = userDao.findByName("%王%");
+        List<User> users = userDao.findByName("王");
+        for (User user:users)
             System.out.println(user);
     }
 
@@ -132,13 +129,21 @@ public class MybatisTest {
      */
     @Test
     public void testFindByVo(){
-        QueryVo queryVo = new QueryVo();
+        QueryVo vo = new QueryVo();
         User user = new User();
         user.setUsername("%王%");
-        queryVo.setUser(user);
+        vo.setUser(user);
 
-        List<User> users = userDao.findUserByVo(queryVo);
+        List<User> users = userDao.findByVo(vo);
         for (User u:users)
             System.out.println(u);
     }
 }
+
+
+
+
+
+
+
+

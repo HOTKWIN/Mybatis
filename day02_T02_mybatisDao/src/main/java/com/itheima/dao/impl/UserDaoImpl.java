@@ -20,52 +20,51 @@ public class UserDaoImpl implements IUserDao {
     }
 
     public List<User> findAll() {
-
-        SqlSession sqlSession = factory.openSession();
-        List<User> users = sqlSession.selectList("com.itheima.dao.IUserDao.findAll");//参数就是获取配置信息的key
-        sqlSession.close();
+        SqlSession session = factory.openSession();
+        List<User> users = session.selectList("com.itheima.dao.IUserDao.findAll");
+        session.close();
         return users;
     }
 
     public void saveUser(User user) {
-        SqlSession sqlSession = factory.openSession();
-        sqlSession.insert("com.itheima.dao.IUserDao.saveUser",user);
-        sqlSession.commit();
-        sqlSession.close();
+        SqlSession session = factory.openSession();
+        session.insert("com.itheima.dao.IUserDao.saveUser",user);
+        session.commit();
+        session.close();
     }
 
     public void updateUser(User user) {
-        SqlSession sqlSession = factory.openSession();
-        sqlSession.update("com.itheima.dao.IUserDao.updateUser",user);
-        sqlSession.commit();
-        sqlSession.close();
+        SqlSession session = factory.openSession();
+        session.update("com.itheima.dao.IUserDao.updateUser",user);
+        session.commit();
+        session.close();
     }
 
     public void deleteUser(Integer userId) {
-        SqlSession sqlSession = factory.openSession();
-        sqlSession.delete("com.itheima.dao.IUserDao.deleteUser",userId);
-        sqlSession.commit();
-        sqlSession.close();
+        SqlSession session = factory.openSession();
+        session.delete("com.itheima.dao.IUserDao.deleteUser",userId);
+        session.commit();
+        session.close();
     }
 
     public User findById(Integer userId) {
-        SqlSession sqlSession = factory.openSession();
-        User user = sqlSession.selectOne("com.itheima.dao.IUserDao.findById", userId);
-        sqlSession.close();
+        SqlSession session = factory.openSession();
+        User user = session.selectOne("com.itheima.dao.IUserDao.findById", userId);
+        session.close();
         return user;
     }
 
     public List<User> findByName(String username) {
-        SqlSession sqlSession = factory.openSession();
-        List<User> users = sqlSession.selectList("com.itheima.dao.IUserDao.findByName", username);
-        sqlSession.close();
+        SqlSession session = factory.openSession();
+        List<User> users = session.selectList("com.itheima.dao.IUserDao.findByName", username);
+        session.close();
         return users;
     }
 
     public int findTotal() {
-        SqlSession sqlSession = factory.openSession();
-        int total = sqlSession.selectOne("com.itheima.dao.IUserDao.findTotal");
-        sqlSession.close();
+        SqlSession session = factory.openSession();
+        int total = session.selectOne("com.itheima.dao.IUserDao.findTotal");
+        session.close();
         return total;
     }
 }

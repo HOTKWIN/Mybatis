@@ -23,15 +23,12 @@ import java.util.List;
 public class MybatisTest {
 
     private InputStream in;
-    private IUserDao userDao;
+    private SqlSessionFactory factory;
 
     @Before
     public void init() throws IOException {
         in = Resources.getResourceAsStream("SqlMapConfig.xml");
-        SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
-        SqlSessionFactory factory = builder.build(in);
-        userDao = new UserDaoImpl(factory);
-
+        factory = new SqlSessionFactoryBuilder().build(in);
     }
 
     @After
@@ -44,8 +41,8 @@ public class MybatisTest {
      * @throws IOException
      */
     @Test
-    public void testFindAll() throws IOException {
-
+    public void testFindAll(){
+        IUserDao userDao = new UserDaoImpl(factory);
         List<User> users = userDao.findAll();
         for (User user:users)
             System.out.println(user);
@@ -55,30 +52,31 @@ public class MybatisTest {
      * 测试保存用户操作
      */
     @Test
-    public void testSaveUser() throws IOException {
+    public void testSaveUser(){
+        UserDaoImpl userDao = new UserDaoImpl(factory);
 
         User user = new User();
-        user.setUsername("kwin1");
-        user.setAddress("广东省广州市");
+        user.setId(49);
+        user.setUsername("kwin");
+        user.setAddress("广东广州");
         user.setSex("男");
         user.setBirthday(new Date());
 
-        System.out.println("保存操作之前：" + user);
         userDao.saveUser(user);
-        System.out.println("保存操作之后：" + user);
-
     }
 
     /**
      * 测试更新操作
      */
     @Test
-    public void testUpdate(){
+    public void testUpdateUser(){
+        IUserDao userDao = new UserDaoImpl(factory);
+
         User user = new User();
-        user.setId(52);
-        user.setUsername("lsx");
-        user.setAddress("白云区");
-        user.setSex("女");
+        user.setId(49);
+        user.setUsername("kwin1");
+        user.setAddress("广东广州");
+        user.setSex("男");
         user.setBirthday(new Date());
 
         userDao.updateUser(user);
@@ -88,15 +86,19 @@ public class MybatisTest {
      * 测试删除操作
      */
     @Test
-    public void testDelete(){
-        userDao.deleteUser(52);
+    public void testDeleteUser(){
+        IUserDao userDao = new UserDaoImpl(factory);
+
+        userDao.deleteUser(49);
     }
 
     /**
      * 测试查询单个用户的方法
      */
     @Test
-    public void testFindOne(){
+    public void testFindById(){
+        IUserDao userDao = new UserDaoImpl(factory);
+
         User user = userDao.findById(48);
         System.out.println(user);
     }
@@ -106,9 +108,10 @@ public class MybatisTest {
      */
     @Test
     public void testFindByName(){
+        IUserDao userDao = new UserDaoImpl(factory);
+
         List<User> users = userDao.findByName("%王%");
-//        List<User> users = userDao.findByName("王");
-        for(User user:users)
+        for (User user:users)
             System.out.println(user);
     }
 
@@ -117,8 +120,9 @@ public class MybatisTest {
      */
     @Test
     public void testFindTotal(){
-        int total = userDao.findTotal();
-        System.out.println(total);
+        IUserDao userDao = new UserDaoImpl(factory);
+
+        userDao.findTotal();
     }
 
 }
