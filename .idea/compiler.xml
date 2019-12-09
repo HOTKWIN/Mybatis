@@ -6,21 +6,49 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="day02_T02_mybatisDao" />
-        <module name="day02_T01_CRUD" />
-        <module name="day01_T01_mybatis" />
-        <module name="day01_T02_annotation" />
-        <module name="day01_T03_daoImp" />
+        <module name="Day01_T03_daolmp" />
+        <module name="Day03_T04_many2many" />
+        <module name="Day01_T01_mybatis_demo" />
+        <module name="Day01_T02_annotation_demo" />
+        <module name="Day03_T02_dynamic_label" />
+        <module name="Day02_T01_CRUD_demo" />
+        <module name="Day03_T03_one2many" />
+        <module name="Day03_T01_datasource" />
         <module name="day01_T04_mybatis_design" />
+        <module name="day02_T02_mybatisDao" />
+        <module name="Day04_T01_lazy_load" />
+        <module name="Day04_T02_cache_demo" />
+        <module name="Day04_T03_annotation_mybatis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="day01_T01_mybatis" target="1.5" />
+      <module name="Day01_T01_mybatis_demo" target="1.5" />
       <module name="day01_T02_annotation" target="1.5" />
+      <module name="Day01_T02_annotation_demo" target="1.5" />
       <module name="day01_T03_daoImp" target="1.5" />
+      <module name="Day01_T03_daolmp" target="1.5" />
       <module name="day01_T04_mybatis_design" target="6" />
+      <module name="day01_T1_mybatisDemo" target="1.5" />
       <module name="day02_T01_CRUD" target="1.5" />
+      <module name="Day02_T01_CRUD_demo" target="1.5" />
       <module name="day02_T02_mybatisDao" target="1.5" />
+      <module name="Day03_T01_datasource" target="1.5" />
+      <module name="day03_T01_datasource" target="1.5" />
+      <module name="Day03_T02_dynamic_label" target="1.5" />
+      <module name="day03_T02_dynamicSQL" target="1.5" />
+      <module name="day03_T03_on2many" target="1.5" />
+      <module name="Day03_T03_one2many" target="1.5" />
+      <module name="day03_T04_many2many" target="1.5" />
+      <module name="Day03_T04_many2many" target="1.5" />
+      <module name="day04_T01_lazy" target="1.5" />
+      <module name="Day04_T01_lazy_load" target="1.5" />
+      <module name="day04_T02_cache" target="1.5" />
+      <module name="Day04_T02_cache_demo" target="1.5" />
+      <module name="day04_T03_annotation" target="1.5" />
+      <module name="Day04_T03_annotation_mybatis" target="1.5" />
+      <module name="Day_T02_dynamic_label" target="1.5" />
+      <module name="many2many" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

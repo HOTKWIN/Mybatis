@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!--使用properties标签指定属性配置-->
+    <!--<properties>
+        <property name="jdbc.driver" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbc.url" value="jdbc:mysql://localhost:3306/eesy"/>
+        <property name="jdbc.username" value="root"/>
+        <property name="jdbc.password" value="123456"/>
+    </properties>-->
+
+    <!--在classpath下定义jdbcConfig.properties文件-->
+    <!--
+    <properties url="file:///D:/developer_tools/workspace_idea1/Mybatis/day02_T01_CRUD/src/main/resources/jdbcConfig.properties">
+    -->
+    <properties resource="jdbcConfig.properties">
+    </properties>
+
+    <!--类型别名-->
+    <typeAliases>
+        <!--指定某个全限定类的别名-->
+        <!--<typeAlias type="com.kwin.domain.User" alias="user"></typeAlias>-->
+
+        <!--指定某个路径，指定后，该路径下的实体类都会被注册别名，就是该类的类名不区分大小写-->
+        <package name="com.kwin.domain"></package>
+    </typeAliases>
+
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <!--<mapper resource="com/kwin/dao/UserDao.xml"></mapper>-->
+
+        <!--注册指定包下的所有接口-->
+        <package name="com.kwin.dao"/>
+    </mappers>
+</configuration>

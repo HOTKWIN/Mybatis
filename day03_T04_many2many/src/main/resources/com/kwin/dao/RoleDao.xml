@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kwin.dao.RoleDao">
+    <resultMap id="RoleUserMap" type="role">
+        <id column="rid" property="roleId"></id>
+        <result column="role_name" property="roleName"></result>
+        <result column="role_desc" property="roleDesc"></result>
+        <collection property="users" column="uid" ofType="user">
+            <id column="uid" property="id"></id>
+            <result column="username" property="username"></result>
+            <result column="birthday" property="birthday"></result>
+            <result column="sex" property="sex"></result>
+            <result column="address" property="address"></result>
+        </collection>
+    </resultMap>
+
+    <select id="findAll" resultMap="RoleUserMap">
+        SELECT r.`ID` rid,r.`ROLE_NAME` role_name,r.`ROLE_DESC` role_desc,u.`id` uid,u.`username`,u.`birthday`,u.`sex`,u.`address`
+        FROM role r,user_role ur,USER u
+        WHERE r.`ID` = ur.RID
+        AND ur.UID = u.id;
+    </select>
+</mapper>

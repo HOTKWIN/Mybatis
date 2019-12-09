@@ -6,12 +6,19 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/day01_T01_mybatis/pom.xml" />
-        <option value="$PROJECT_DIR$/day01_T02_annotation/pom.xml" />
-        <option value="$PROJECT_DIR$/day01_T03_daoImp/pom.xml" />
         <option value="$PROJECT_DIR$/day01_T04_mybatis_design/pom.xml" />
-        <option value="$PROJECT_DIR$/day02_T01_CRUD/pom.xml" />
         <option value="$PROJECT_DIR$/day02_T02_mybatisDao/pom.xml" />
+        <option value="$PROJECT_DIR$/Day01_T01_mybatis_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/Day01_T02_annotation_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/Day01_T03_daolmp/pom.xml" />
+        <option value="$PROJECT_DIR$/Day02_T01_CRUD_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/Day03_T01_datasource/pom.xml" />
+        <option value="$PROJECT_DIR$/Day03_T02_dynamic_label/pom.xml" />
+        <option value="$PROJECT_DIR$/Day03_T03_one2many/pom.xml" />
+        <option value="$PROJECT_DIR$/Day03_T04_many2many/pom.xml" />
+        <option value="$PROJECT_DIR$/Day04_T01_lazy_load/pom.xml" />
+        <option value="$PROJECT_DIR$/Day04_T02_cache_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/Day04_T03_annotation_mybatis/pom.xml" />
       </list>
     </option>
   </component>

@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Day01_T01_mybatis_demo/Day01_T01_mybatis_demo.iml" filepath="$PROJECT_DIR$/Day01_T01_mybatis_demo/Day01_T01_mybatis_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day01_T02_annotation_demo/Day01_T02_annotation_demo.iml" filepath="$PROJECT_DIR$/Day01_T02_annotation_demo/Day01_T02_annotation_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day01_T03_daolmp/Day01_T03_daolmp.iml" filepath="$PROJECT_DIR$/Day01_T03_daolmp/Day01_T03_daolmp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day02_T01_CRUD_demo/Day02_T01_CRUD_demo.iml" filepath="$PROJECT_DIR$/Day02_T01_CRUD_demo/Day02_T01_CRUD_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day03_T01_datasource/Day03_T01_datasource.iml" filepath="$PROJECT_DIR$/Day03_T01_datasource/Day03_T01_datasource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day03_T02_dynamic_label/Day03_T02_dynamic_label.iml" filepath="$PROJECT_DIR$/Day03_T02_dynamic_label/Day03_T02_dynamic_label.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day03_T03_one2many/Day03_T03_one2many.iml" filepath="$PROJECT_DIR$/Day03_T03_one2many/Day03_T03_one2many.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day03_T04_many2many/Day03_T04_many2many.iml" filepath="$PROJECT_DIR$/Day03_T04_many2many/Day03_T04_many2many.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day04_T01_lazy_load/Day04_T01_lazy_load.iml" filepath="$PROJECT_DIR$/Day04_T01_lazy_load/Day04_T01_lazy_load.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day04_T02_cache_demo/Day04_T02_cache_demo.iml" filepath="$PROJECT_DIR$/Day04_T02_cache_demo/Day04_T02_cache_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day04_T03_annotation_mybatis/Day04_T03_annotation_mybatis.iml" filepath="$PROJECT_DIR$/Day04_T03_annotation_mybatis/Day04_T03_annotation_mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Mybatis.iml" filepath="$PROJECT_DIR$/.idea/Mybatis.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day01_T01_mybatis/day01_T01_mybatis.iml" filepath="$PROJECT_DIR$/day01_T01_mybatis/day01_T01_mybatis.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day01_T02_annotation/day01_T02_annotation.iml" filepath="$PROJECT_DIR$/day01_T02_annotation/day01_T02_annotation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day01_T03_daoImp/day01_T03_daoImp.iml" filepath="$PROJECT_DIR$/day01_T03_daoImp/day01_T03_daoImp.iml" />
       <module fileurl="file://$PROJECT_DIR$/day01_T04_mybatis_design/day01_T04_mybatis_design.iml" filepath="$PROJECT_DIR$/day01_T04_mybatis_design/day01_T04_mybatis_design.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day02_T01_CRUD/day02_T01_CRUD.iml" filepath="$PROJECT_DIR$/day02_T01_CRUD/day02_T01_CRUD.iml" />
       <module fileurl="file://$PROJECT_DIR$/day02_T02_mybatisDao/day02_T02_mybatisDao.iml" filepath="$PROJECT_DIR$/day02_T02_mybatisDao/day02_T02_mybatisDao.iml" />
     </modules>
   </component>
